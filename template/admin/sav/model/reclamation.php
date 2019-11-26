@@ -9,16 +9,22 @@ class reclamation
 	private $email;
 	private $sujet;
 	private $message;
+	private $etat; 
 
-	function __construct($nom,$prenom,$email,$sujet,$message)
+	function __construct($id, $nom,$prenom,$email,$sujet,$message,$etat)
 				{
+			$this->id=$id; 
 		$this->nom=$nom;
 		$this->prenom=$prenom;
 		$this->email=$email;
 		$this->sujet=$sujet;
 		$this->message=$message;
+		$this->etat=$etat;
 				}
-	
+	function getid()
+	{
+		return $this->id;
+	}
 	function getnom(){
 		return $this->nom;
 	}
@@ -34,6 +40,11 @@ class reclamation
 	function getmessage(){
 		return $this->message;
 	}
+	function getetat()
+	{
+		return $this->etat;
+	}
+
 
 function setnom($nom)
 {
@@ -51,7 +62,11 @@ function setnom($nom)
 	function setmessage($message){
 		$this->message=$message;
 	}
-	
+	function setetat($etat)
+	{
+		$this->etat=$etat;
+	}
+
 }
 
 ?>
