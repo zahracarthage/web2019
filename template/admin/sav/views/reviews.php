@@ -1,7 +1,7 @@
 <?php
-include "../controllers/reclamationc.php";
-$reclamationc1 = new reclamationc(); 
-$listereclamation=$reclamationc1->afficherreclamation();
+include "../controllers/reviewc.php";
+$revc1 = new reviewc(); 
+$listerevs=$revc1->afficherreview();
 
 ?>
 
@@ -294,16 +294,16 @@ John Abraham</h5>
                                     </ul>
                                 </div>
                             </li>
-                          <!--SAV-->
+                            <!--SAV-->
 <li class="nav-item ">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fab fa-fw fa-wpforms"></i>SAV</a>
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">reclamation</a>
+                                            <a class="nav-link" href="reclamation.php">reclamation</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="reviews.php">review</a>
+                                            <a class="nav-link" href="#">review</a>
                                         </li>
                                         
                                     </ul>
@@ -488,41 +488,48 @@ John Abraham</h5>
                     <!-- ============================================================== -->
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Reclamations</h5>
+                            <h5 class="card-header">reviews</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered first">
                                      
 <tr>
+    <th>ID </th>
     <th> Nom</th>
-    <th>Prenom</th>
     <th>E-mail</th>
-    <th>Sujet</th>
-    <th>Message</th>
+    <th> review</th>
+    <th>nbr d'etoiles</th>
+    <th>date </th>
     <th>Etat</th>
     <th>modifier</th>
     <th>supprimer</th>
 
 </tr>
 
-<?PHP foreach($listereclamation as $row){
+<?PHP foreach($listerevs as $row){
     ?>
     <tr>
+
+    <td><?PHP echo $row['id']; ?> </td>
+
     <td><?PHP echo $row['nom']; ?> </td>
-    <td><?PHP echo $row['prenom']; ?> </td>
-    <td><?PHP echo $row['email']; ?> </td>
-    <td><?PHP echo $row['sujet']; ?> </td>
-    <td><?PHP echo $row['message']; ?> </td>
+        <td><?PHP echo $row['email']; ?> </td>
+
+    <td><?PHP echo $row['review']; ?> </td>
+        <td><?PHP echo $row['rating']; ?> </td>
+
+
+    <td><?PHP echo $row['date']; ?></td>
 
     <td name="etat" value="<?PHP echo $row['etat'] ;?> ">  
 
        <?php 
             if (($row['etat'])==1 )
             {
-                echo "regle";
+                echo "acceptee";
             }
 
-            else echo "non regle";
+            else echo "non-acceptee";
 
 
        ?>
@@ -531,7 +538,7 @@ John Abraham</h5>
 
     <td>
 
-       <button> <a  target="_blank" href="modifieretat.php?id=<?php echo $row['id'];?>"> Modifier  </a> 
+       <button> <a  target="_blank" href="modifieretatr.php?id=<?php echo $row['id'];?>"> Modifier  </a> 
 
        </button>
     </td>
@@ -539,7 +546,7 @@ John Abraham</h5>
 
 
 <td>
-        <form method="POST" action="supprimerreclamation.php">
+        <form method="POST" action="supprimereview.php">
     <input type="submit" name="supprimer" value="supprimer">
         <input type="hidden" value="<?PHP echo $row['id']; ?>" name="id" >
 

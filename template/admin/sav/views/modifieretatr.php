@@ -1,12 +1,3 @@
-<?php
-include "../controllers/reclamationc.php";
-$reclamationc1 = new reclamationc(); 
-$listereclamation=$reclamationc1->afficherreclamation();
-
-?>
-
-
-
 
  
 <head>
@@ -33,12 +24,13 @@ $listereclamation=$reclamationc1->afficherreclamation();
     <!-- main wrapper -->
     <!-- ============================================================== -->
     <div class="dashboard-main-wrapper">
-         <!-- ============================================================== -->
+         <!-
+          ============================================================== -->
         <!-- navbar -->
         <!-- ============================================================== -->
          <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="../../index.html">Concept</a>
+                <a class="navbar-brand" href="../index.html">Concept</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -145,7 +137,8 @@ John Abraham</h5>
                     </ul>
                 </div>
             </nav>
-        </div>
+    
+
         <!-- ============================================================== -->
         <!-- end navbar -->
         <!-- ============================================================== -->
@@ -294,134 +287,120 @@ John Abraham</h5>
                                     </ul>
                                 </div>
                             </li>
-                          <!--SAV-->
-<li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fab fa-fw fa-wpforms"></i>SAV</a>
-                                <div id="submenu-6" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">reclamation</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="reviews.php">review</a>
-                                        </li>
-                                        
-                                    </ul>
-                                </div>
-                            </li>
-
-
                             <li class="nav-divider">
                                 Features
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-file"></i> Pages </a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i>Pages</a>
+                                <div id="submenu-6" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="invoice.html">Invoice</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="blank-page.html">Blank Page</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="blank-page-header.html">Blank Page Header</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="404-page.html">404 page</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="sign-up.html">Sign up Page</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="forgot-password.html">Forgot Password</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pricing.html">Pricing Tables</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="timeline.html">Timeline</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="calendar.html">Calendar</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="sortable-nestable-lists.html">Sortable/Nestable List</a>
+                                        </li>
+                                       <li class="nav-item">
+                                            <a class="nav-link" href="widgets.html">Widgets</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="media-object.html">Media Objects</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="cropper-image.html">Cropper</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="color-picker.html">Color Picker</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-inbox"></i>Apps <span class="badge badge-secondary">New</span></a>
                                 <div id="submenu-7" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/blank-page.html">Blank Page</a>
+                                            <a class="nav-link" href="inbox.html">Inbox</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/blank-page-header.html">Blank Page Header</a>
+                                            <a class="nav-link" href="email-details.html">Email Detail</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/login.html">Login</a>
+                                            <a class="nav-link" href="email-compose.html">Email Compose</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/404-page.html">404 page</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/sign-up.html">Sign up Page</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/forgot-password.html">Forgot Password</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/pricing.html">Pricing Tables</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/timeline.html">Timeline</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/calendar.html">Calendar</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/sortable-nestable-lists.html">Sortable/Nestable List</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/widgets.html">Widgets</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/media-object.html">Media Objects</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/cropper-image.html">Cropper</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/color-picker.html">Color Picker</a>
+                                            <a class="nav-link" href="message-chat.html">Message Chat</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i class="fas fa-fw fa-inbox"></i>Apps <span class="badge badge-secondary">New</span></a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i class="fas fa-fw fa-columns"></i>Icons</a>
                                 <div id="submenu-8" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/inbox.html">Inbox</a>
+                                            <a class="nav-link" href="icon-fontawesome.html">FontAwesome Icons</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/email-details.html">Email Detail</a>
+                                            <a class="nav-link" href="icon-material.html">Material Icons</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/email-compose.html">Email Compose</a>
+                                            <a class="nav-link" href="icon-simple-lineicon.html">Simpleline Icon</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/message-chat.html">Message Chat</a>
+                                            <a class="nav-link" href="icon-themify.html">Themify Icon</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="icon-flag.html">Flag Icons</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="icon-weather.html">Weather Icon</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i class="fas fa-fw fa-columns"></i>Icons</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i class="fas fa-fw fa-map-marker-alt"></i>Maps</a>
                                 <div id="submenu-9" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/icon-fontawesome.html">FontAwesome Icons</a>
+                                            <a class="nav-link" href="map-google.html">Google Maps</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/icon-material.html">Material Icons</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/icon-simple-lineicon.html">Simpleline Icon</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/icon-themify.html">Themify Icon</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/icon-flag.html">Flag Icons</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/icon-weather.html">Weather Icon</a>
+                                            <a class="nav-link" href="map-vector.html">Vector Maps</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-fw fa-map-marker-alt"></i>Maps</a>
-                                <div id="submenu-9" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/map-google.html">Google Maps</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/map-vector.html">Vector Maps</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-11" aria-controls="submenu-11"><i class="fas fa-f fa-folder"></i>Menu Level</a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-f fa-folder"></i>Menu Level</a>
                                 <div id="submenu-10" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -449,8 +428,9 @@ John Abraham</h5>
                         </ul>
                     </div>
                 </nav>
-            </div>
-        </div>
+           </div>
+       </div>
+
         <!-- ============================================================== -->
         <!-- end left sidebar -->
         <!-- ============================================================== -->
@@ -475,11 +455,7 @@ John Abraham</h5>
                                         <li class="breadcrumb-item active" aria-current="page">Reclamations</li>
                                     </ol>
                                 </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
+        <!-- ============================================================== -->
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
                 <div class="row">
@@ -488,81 +464,105 @@ John Abraham</h5>
                     <!-- ============================================================== -->
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Reclamations</h5>
+                            <h5 class="card-header">Modifier etat</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered first">
-                                     
-<tr>
-    <th> Nom</th>
-    <th>Prenom</th>
-    <th>E-mail</th>
-    <th>Sujet</th>
-    <th>Message</th>
-    <th>Etat</th>
-    <th>modifier</th>
-    <th>supprimer</th>
-
-</tr>
-
-<?PHP foreach($listereclamation as $row){
-    ?>
-    <tr>
-    <td><?PHP echo $row['nom']; ?> </td>
-    <td><?PHP echo $row['prenom']; ?> </td>
-    <td><?PHP echo $row['email']; ?> </td>
-    <td><?PHP echo $row['sujet']; ?> </td>
-    <td><?PHP echo $row['message']; ?> </td>
-
-    <td name="etat" value="<?PHP echo $row['etat'] ;?> ">  
-
-       <?php 
-            if (($row['etat'])==1 )
-            {
-                echo "regle";
-            }
-
-            else echo "non regle";
+             
 
 
-       ?>
-    
-   </td>
-
-    <td>
-
-       <button> <a  target="_blank" href="modifieretat.php?id=<?php echo $row['id'];?>"> Modifier  </a> 
-
-       </button>
-    </td>
+<?PHP
+include "../model/review.php";
+include "../controllers/reviewc.php";
 
 
+if (isset($_GET['id'])) 
+{
+    $revc1=new reviewc();
+    $result=$revc1->recupereretatr($_GET['id']);
+
+    foreach($result as $row){
+        $id=$row['id'];
+        $nom=$row['nom'];
+        $email=$row['email'];
+        $rating=$row['rating'];
+        $review=$row['review'];
+         $etat=$row['etat'];
+     }
+ }
+
+?>
+           
+
+<caption>Modifier ETAT</caption>
+
+
+<form method="POST">
+
+<table>
+
+
+
+<tr> 
+    <td> Etat </td>
 
 <td>
-        <form method="POST" action="supprimerreclamation.php">
-    <input type="submit" name="supprimer" value="supprimer">
-        <input type="hidden" value="<?PHP echo $row['id']; ?>" name="id" >
 
-        </form>
+
+    <select name="etat" value="<?PHP echo $row['etat'] ;?> ">
+
+        <option value="0"> ne pas accepter </option>
+        <option value="1"> accepter  </option>
+        
+
+    </select>
+
+
+</td>
+</tr>
+
+
+<tr>
+
+    <td colspan="2"> <br>
+
+     <input type="hidden" value="<?PHP echo $row['id']; ?>" name="id" >
+    <input type="submit" name="update">
+
+        
     </td>
+</tr>
 
+<td><input type="hidden" name="id-ini" value="<?PHP echo $_GET['id'];?>"></td>
 
-<!--
-    <td>
-        <button><a href="mailing.html">Repondre</button>
-    </td>.  -->
-   
-    </tr>
-    <?PHP }
+</table>
+</form>
+
+<?PHP
+    
+
+if (isset($_POST['update'])) {
+
+    $rev =new review($id,$nom,$email,$review,$rating,$_POST['etat']);
+
+    $revc1->modifieretat($rev,$_POST['id-ini']);
+
+    echo $_POST['id-ini'] ;
+ 
+}
 ?>
-                
-                     </table>
-                     </div>
-                     </div>
-                     </div>
-                     </div>
 
-                               </div>         
+
+
+
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
                     <!-- ============================================================== -->
                     <!-- end basic table  -->
                     <!-- ============================================================== -->
@@ -587,13 +587,13 @@ John Abraham</h5>
                     </div>
                 </div>
             </div>
+
             <!-- ============================================================== -->
             <!-- end footer -->
             <!-- ============================================================== -->
         </div>
     </div>
 </div>
-
     <!-- ============================================================== -->
     <!-- end main wrapper -->
     <!-- ============================================================== -->
@@ -618,5 +618,6 @@ John Abraham</h5>
     <script src="https://cdn.datatables.net/rowgroup/1.0.4/js/dataTables.rowGroup.min.js"></script>
     <script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
+
 
 </body>

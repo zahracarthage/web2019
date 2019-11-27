@@ -1,3 +1,29 @@
+<?php
+include "../controllers/reviewc.php";
+$revc1 = new reviewc(); 
+
+
+$listerevs=$revc1->afficherreview();
+$lista=$revc1->afficherreview();
+
+$r=0; 
+
+foreach ($lista as $k ) {
+
+	if  (($k['etat'])==1 )  
+{
+
+ 	$r+=1;
+}
+}
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -170,13 +196,13 @@
 				<div id="responsive-nav">
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="index.html">Home</a></li>
+						<li class="active"><a href="../../index.html">home</a></li>
 						<li><a href="#">Hot Deals</a></li>
 						<li><a href="#">Categories</a></li>
 						<li><a href="#">Categ1</a></li>
 						<li><a href="#">Categ2</a></li>
 						<li><a href="#">Categ3</a></li>
-						<li><a href="#">Categ4</a></li>
+						<li><a href="contact.html">contact</a></li>
 					</ul>
 					<!-- /NAV -->
 				</div>
@@ -326,7 +352,23 @@
 
 						</div>
 					</div>
+	
 					<!-- /Product details -->
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
 
 					<!-- Product tab -->
 					<div class="col-md-12">
@@ -335,7 +377,9 @@
 							<ul class="tab-nav">
 								<li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
 								<li><a data-toggle="tab" href="#tab2">Details</a></li>
-								<li><a data-toggle="tab" href="#tab3">Reviews (3)</a></li>
+								<li><a data-toggle="tab" href="#tab3">Reviews(<?php echo $r ;?>
+)
+</a></li>
 							</ul>
 							<!-- /product tab nav -->
 
@@ -362,6 +406,8 @@
 								<!-- /tab2  -->
 
 								<!-- tab3  -->
+
+
 								<div id="tab3" class="tab-pane fade in">
 									<div class="row">
 										<!-- Rating -->
@@ -389,7 +435,7 @@
 														<div class="rating-progress">
 															<div style="width: 80%;"></div>
 														</div>
-														<span class="sum">3</span>
+														<span class="sum"> 3 </span>
 													</li>
 													<li>
 														<div class="rating-stars">
@@ -449,87 +495,171 @@
 										<!-- /Rating -->
 
 										<!-- Reviews -->
+
+
 										<div class="col-md-6">
-											<div id="reviews">
-												<ul class="reviews">
-													<li>
+	
+	
+
+
+
+
+ 
+                  									<div id="reviews">
+									
+
+			<?PHP 
+  
+			foreach($listerevs as $row)
+		{ 
+
+    ?>  
+    <?php  if (($row['etat'])==1 )  
+   
+
+    { 
+    	?>
+    	
+    	
+
+    	<table>
+
+    	<ul class="reviews">
+	
+	<li> 
+
+												
 														<div class="review-heading">
-															<h5 class="name">John</h5>
-															<p class="date">27 DEC 2018, 8:0 PM</p>
+
+
+
+														<h5 class="name"> <?PHP echo $row['nom']; ?></h5>
+
+
+														
+
+															<p class="date"><?PHP echo $row['date']; ?></p>
+
+															
+
+
 															<div class="review-rating">
+
+
+														<?php for ($i=0;$i++,$i<= ($row['rating']);)
+         													
+         													{  ?>
+
+														
+
 																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
+														
+
+																<?php } ?>
+
+															<?php for ($i=0;$i++,$i<= 5-($row['rating']);)
+         													
+         													{  ?>
+
+														
 																<i class="fa fa-star-o empty"></i>
-															</div>
-														</div>
-														<div class="review-body">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-														</div>
-													</li>
-													<li>
-														<div class="review-heading">
-															<h5 class="name">John</h5>
-															<p class="date">27 DEC 2018, 8:0 PM</p>
-															<div class="review-rating">
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star-o empty"></i>
-															</div>
-														</div>
-														<div class="review-body">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-														</div>
-													</li>
-													<li>
-														<div class="review-heading">
-															<h5 class="name">John</h5>
-															<p class="date">27 DEC 2018, 8:0 PM</p>
-															<div class="review-rating">
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star-o empty"></i>
-															</div>
-														</div>
-														<div class="review-body">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-														</div>
-													</li>
-												</ul>
-												<ul class="reviews-pagination">
+
+														
+
+																<?php } ?>
+
+																	</div>  
+</div>
+
+															<div class="review-body">
+															<p><?PHP echo $row['review']; ?></p>
+														    </div>
+
+														
+												
+
+														
+												
+													
+
+
+
+												
+
+
+</li>
+  
+
+    </ul>
+
+    </table>
+
+
+     <?php } ?>
+
+
+<?PHP }
+?>
+
+	</div>
+
+
+				
+									<!-- /Reviews -->
+
+
+
+								<ul class="reviews-pagination">
+
 													<li class="active">1</li>
 													<li><a href="#">2</a></li>
 													<li><a href="#">3</a></li>
 													<li><a href="#">4</a></li>
 													<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
 												</ul>
-											</div>
+												
+
+									
 										</div>
-										<!-- /Reviews -->
+
+
 
 										<!-- Review Form -->
+
 										<div class="col-md-3">
 											<div id="review-form">
-												<form class="review-form">
-													<input class="input" type="text" placeholder="Your Name">
-													<input class="input" type="email" placeholder="Your Email">
-													<textarea class="input" placeholder="Your Review"></textarea>
+
+
+											<form class="review-form" method="POST" action="ajouterreview.php">
+
+
+													<input class="input" type="text" placeholder="Your Name" name="nom" required="">
+
+													<input class="input" type="email" placeholder="Your Email" name="email" required="">
+
+													<textarea class="input" placeholder="Your Review" name="review" required=""> </textarea>
+
+
 													<div class="input-rating">
+
 														<span>Your Rating: </span>
 														<div class="stars">
-															<input id="star5" name="rating" value="5" type="radio"><label for="star5"></label>
-															<input id="star4" name="rating" value="4" type="radio"><label for="star4"></label>
-															<input id="star3" name="rating" value="3" type="radio"><label for="star3"></label>
-															<input id="star2" name="rating" value="2" type="radio"><label for="star2"></label>
-															<input id="star1" name="rating" value="1" type="radio"><label for="star1"></label>
+
+
+											     			<input id="star5" name="rating" value="5" type="radio"  required=""><label for="star5"></label>
+
+															<input id="star4" name="rating" value="4" type="radio" required=""><label for="star4"></label>
+
+															<input id="star3" name="rating" value="3" type="radio" required=""><label for="star3"></label>
+
+															<input id="star2" name="rating" value="2" type="radio"  required=""><label for="star2"></label>
+
+															<input id="star1" name="rating" value="1" type="radio"   required=""> <label for="star1"></label>
+
 														</div>
 													</div>
-													<button class="primary-btn">Submit</button>
+													<input type="submit" name="envoyer" value="envoyer" class="primary-btn">
+											
 												</form>
 											</div>
 										</div>
@@ -751,7 +881,7 @@
 									<li><a href="#">Categ1</a></li>
 									<li><a href="#">Categ2</a></li>
 									<li><a href="#">Categ3</a></li>
-									<li><a href="#">Categ4</a></li>
+									<li><a href="contact.html">contact</a></li>
 								</ul>
 							</div>
 						</div>
