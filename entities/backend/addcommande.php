@@ -22,6 +22,7 @@ $holy="INSERT into livraison (id,idcommande,etat,prix) values ('$nb1','$nb','$st
 $query=$co->prepare($holy);
 $query=$co->query($holy);
 header("location: ../../views/backend/commande.php");
+header ("location : ./backend/commande.php); 
 
 
 ?>
